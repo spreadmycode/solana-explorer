@@ -140,7 +140,7 @@ const VideoArtContent = ({
     likelyVideo.startsWith("https://watch.videodelivery.net/") ? (
       <div className={"d-block"}>
         <Stream
-          streamRef={(e: any) => playerRef(e)}
+          streamRef={(e: StreamPlayerApi) => playerRef(e)}
           src={likelyVideo.replace("https://watch.videodelivery.net/", "")}
           loop={true}
           height={180}
