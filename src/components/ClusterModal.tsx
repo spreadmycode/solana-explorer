@@ -44,10 +44,10 @@ export function ClusterModal() {
                 &times;
               </span>
 
-              <h2 className="text-center mb-4 mt-4">Choose a Cluster</h2>
+              {/* <h2 className="text-center mb-4 mt-4">Choose a Cluster</h2> */}
               <ClusterToggle />
 
-              {showDeveloperSettings && (
+              {/* {showDeveloperSettings && (
                 <>
                   <hr />
 
@@ -73,7 +73,7 @@ export function ClusterModal() {
                     via the "customUrl" url param.
                   </p>
                 </>
-              )}
+              )} */}
             </div>
           </div>
         </div>

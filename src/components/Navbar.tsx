@@ -1,5 +1,6 @@
 import React from "react";
-import Logo from "img/logos-solana/dark-explorer-logo.svg";
+// import Logo from "img/logos-solana/dark-explorer-logo.svg";
+import Logo from "img/scan/logo-solana-scan.ae03f445.svg";
 import { clusterPath } from "utils/url";
 import { Link, NavLink } from "react-router-dom";
 import { ClusterStatusButton } from "components/ClusterStatusButton";
@@ -9,10 +10,10 @@ export function Navbar() {
   const [collapse, setCollapse] = React.useState(false);
 
   return (
-    <nav className="navbar navbar-expand-md navbar-light">
+    <nav className="navbar navbar-expand-md navbar-light align-items-start">
       <div className="container">
         <Link to={clusterPath("/")}>
-          <img src={Logo} width="250" alt="Solana Explorer" />
+          <img src={Logo} width="130" alt="Solana Explorer" />
         </Link>
 
         <button
@@ -28,7 +29,7 @@ export function Navbar() {
             collapse ? "show" : ""
           }`}
         >
-          <ul className="navbar-nav mr-auto">
+          {/* <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <NavLink className="nav-link" to={clusterPath("/")} exact>
                 Cluster Stats
@@ -44,7 +45,7 @@ export function Navbar() {
                 Inspector
               </NavLink>
             </li>
-          </ul>
+          </ul> */}
         </div>
 
         <div className="d-none d-md-block">

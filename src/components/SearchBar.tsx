@@ -39,33 +39,36 @@ export function SearchBar() {
 
   const resetValue = "" as any;
   return (
-    <div className="container my-4">
-      <div className="row align-items-center">
-        <div className="col">
-          <Select
-            ref={(ref) => (selectRef.current = ref)}
-            options={buildOptions(
-              search,
-              cluster,
-              tokenRegistry,
-              epochInfo?.epoch
-            )}
-            noOptionsMessage={() => "No Results"}
-            placeholder="Search for blocks, accounts, transactions, programs, and tokens"
-            value={resetValue}
-            inputValue={search}
-            blurInputOnSelect
-            onMenuClose={() => selectRef.current?.blur()}
-            onChange={onChange}
-            styles={{
-              /* work around for https://github.com/JedWatson/react-select/issues/3857 */
-              placeholder: (style) => ({ ...style, pointerEvents: "none" }),
-              input: (style) => ({ ...style, width: "100%" }),
-            }}
-            onInputChange={onInputChange}
-            components={{ DropdownIndicator }}
-            classNamePrefix="search-bar"
-          />
+    <div className="text-center search-block">
+      <h1 className="explore-text"> Explore Solana Blockchain </h1>
+      <div className="container my-1 search-bar">
+        <div className="row align-items-center">
+          <div className="col">
+            <Select
+              ref={(ref) => (selectRef.current = ref)}
+              options={buildOptions(
+                search,
+                cluster,
+                tokenRegistry,
+                epochInfo?.epoch
+              )}
+              noOptionsMessage={() => "No Results"}
+              placeholder="Search for blocks, accounts, transactions, programs, and tokens"
+              value={resetValue}
+              inputValue={search}
+              blurInputOnSelect
+              onMenuClose={() => selectRef.current?.blur()}
+              onChange={onChange}
+              styles={{
+                /* work around for https://github.com/JedWatson/react-select/issues/3857 */
+                placeholder: (style) => ({ ...style, pointerEvents: "none" }),
+                input: (style) => ({ ...style, width: "100%" }),
+              }}
+              onInputChange={onInputChange}
+              components={{ DropdownIndicator }}
+              classNamePrefix="search-bar"
+            />
+          </div>
         </div>
       </div>
     </div>

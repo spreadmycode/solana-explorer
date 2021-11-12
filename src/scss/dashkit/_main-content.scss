@@ -68,3 +68,23 @@
     }
   }
 }
+
+.search-block {
+  z-index: 9999;
+  margin-top: -8%;
+  position: relative;
+}
+
+.search-bar {
+  width: 45%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid rgb(0, 232, 181);
+}
+
+.explore-text {
+  color: white;
+  font-size: 40px;
+}

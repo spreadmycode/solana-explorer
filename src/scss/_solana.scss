@@ -67,10 +67,14 @@ ul.log-messages {
 
 .modal.show {
   display: block;
+  z-index: 9999999;
 }
 
 .c-pointer {
   cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
 }
 
 .v-hidden {
@@ -188,6 +192,10 @@ h4.slot-pill {
   transition: color 150ms;
   box-sizing: border-box;
   cursor: pointer;
+  background: rgb(199, 74, 227);
+  border-radius: 5px;
+  margin-left: 7px;
+  color: white;
 
   &:hover {
     color: hsl(0, 0%, 40%);
